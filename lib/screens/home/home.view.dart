@@ -28,32 +28,23 @@ class HomeView extends StatelessWidget {
           children: [
             OnReactive(
               () => Text(
-                _dt.rxhitung.state.toString(),
+                _dt.rxHitung.state.toString(),
                 textScaleFactor: 2,
               ),
             ),
             OnBuilder(
-              listenTo: _dt.rxhitung,
+              listenTo: _dt.rxHitung,
               builder: () => Text(
-                _dt.rxhitung.state.toString(),
+                _dt.rxHitung.state.toString(),
                 textScaleFactor: 2,
               ),
             ),
-            const SizedBox(
-              height: 10,
+            ElevatedButton(
+              onPressed: () => _ct.tambah(),
+              child: const Text(
+                "Tambah",
+              ),
             ),
-            OutlinedButton(
-              onPressed: () {
-                () => _ct.tambah();
-              },
-              child: const Text('Tambah'),
-            )
-            // ElevatedButton(
-            // onPressed: () => _ct.tambah(),
-            //   child: const Text(
-            //     "Tambah",
-            //   ),
-            // ),
           ],
         ),
       ),

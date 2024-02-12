@@ -8,6 +8,20 @@ class LoginView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(Random().nextInt(100).toString()),
+        actions: [
+          Center(
+            child: Row(
+              children: [
+                IconButton(
+                  onPressed: () {
+                    html.window.open('https://github.com/nadhilahaz/nadhilah_sm', 'new');
+                  },
+                  icon: const FaIcon(FontAwesomeIcons.github),
+                ),
+              ],
+            ),
+          )
+        ],
       ),
       body: Center(
         child: Column(

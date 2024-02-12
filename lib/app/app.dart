@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nadhilah_sm/screens/home/_index.dart';
+// import 'package:nadhilah_sm/screens/home/_index.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
