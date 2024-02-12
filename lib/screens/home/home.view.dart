@@ -8,6 +8,20 @@ class HomeView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(Random().nextInt(100).toString()),
+        actions: [
+          Center(
+            child: Row(
+              children: [
+                IconButton(
+                  onPressed: () {
+                    html.window.open('https://github.com/nadhilahaz/nadhilah_sm', 'new');
+                  },
+                  icon: const FaIcon(FontAwesomeIcons.github),
+                ),
+              ],
+            ),
+          )
+        ],
       ),
       body: Center(
         child: Column(
@@ -25,12 +39,21 @@ class HomeView extends StatelessWidget {
                 textScaleFactor: 2,
               ),
             ),
-            ElevatedButton(
-              onPressed: () => _ct.tambah(),
-              child: const Text(
-                "Tambah",
-              ),
+            const SizedBox(
+              height: 10,
             ),
+            OutlinedButton(
+              onPressed: () {
+                () => _ct.tambah();
+              },
+              child: const Text('Tambah'),
+            )
+            // ElevatedButton(
+            // onPressed: () => _ct.tambah(),
+            //   child: const Text(
+            //     "Tambah",
+            //   ),
+            // ),
           ],
         ),
       ),
