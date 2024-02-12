@@ -29,14 +29,14 @@ class HomeView extends StatelessWidget {
             OnReactive(
               () => Text(
                 _dt.rxHitung.state.toString(),
-                textScaleFactor: 2,
+                textScaler: const TextScaler.linear(2),
               ),
             ),
             OnBuilder(
               listenTo: _dt.rxHitung,
               builder: () => Text(
                 _dt.rxHitung.state.toString(),
-                textScaleFactor: 2,
+                textScaler: const TextScaler.linear(2),
               ),
             ),
             ElevatedButton(
